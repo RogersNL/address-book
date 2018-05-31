@@ -9,7 +9,7 @@ $("#addressBook").submit(function(event){
   var inputState = $("select#addressState").val();
   var inputZip = $("input#addressZip").val();
   var inputPhone = $("input#phoneNumber").val();
-  var inputEmail =$("input#email").val();
+  var inputEmail = $("input#email").val();
 
 
   $("ul#contactList").prepend(
@@ -26,8 +26,8 @@ $("#addressBook").submit(function(event){
         '</div>' +
       '</li>'
 
-    ).click(function(){
-      $(".hiddenInfo").toggle();
+    ).children("li").first().click(function(){
+      $(this).children(":last-child").toggle();
 
   });
 
